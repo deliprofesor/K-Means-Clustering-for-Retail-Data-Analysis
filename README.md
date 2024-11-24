@@ -49,6 +49,7 @@ Silhouette Yöntemi ile kümeleme sonuçlarının kalitesi değerlendirilir. Sil
 
 Elbow ve Silhouette yöntemleriyle belirlenen en uygun K değeri kullanılarak yeni kümeleme modelleri (2 küme ve 3 küme) oluşturulur.
 Bu yeni kümelerle birlikte verinin tekrar analiz edilmesi sağlanır ve her küme için ortalama harcama değerleri yeniden hesaplanır.
+
 ![K2](https://github.com/user-attachments/assets/85873e32-4945-4bf0-9ed5-c0c7fe0c3c10)
 ![K3](https://github.com/user-attachments/assets/5f534c6d-6401-415f-89ee-a8cdc3c9c315)
 
