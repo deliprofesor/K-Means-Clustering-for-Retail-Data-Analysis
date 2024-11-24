@@ -23,22 +23,33 @@ Aykırı değerler (outliers) tespit edilip temizlenebilir, ancak bu projede bu 
 K-Means Kümeleme Algoritması uygulanır. Bu algoritma, verileri belirli sayıda kümeye ayırır ve her küme, benzer özelliklere sahip verilerden oluşur. Kümeleme modeli oluşturulurken 4 küme sayısı belirlenir.
 Model oluşturulurken kullanılan parametreler: centers=4 (4 küme), iter.max=15 (maksimum 15 iterasyon), ve nstart=15 (15 farklı başlangıç noktası ile başlatma).
 Kümeleme sonuçları ve her bir verinin ait olduğu küme (clusterModel$cluster) elde edilir.
+![k-means clustering](https://github.com/user-attachments/assets/35756eea-a92b-4c18-b839-948a0ffabd22)
+
 
 # 4. Kümeler Arası Analiz
 Kümeleme sonuçlarına göre her bir küme için ortalama harcama değerleri hesaplanır. Her küme için Fresh, Milk, Grocery, Frozen, Detergents_Paper, ve Delicatessen ürün kategorilerindeki harcamalar incelenir.
 Kümelemeyi görselleştirmek için boxplot grafikleri kullanılır. Bu grafikler, her kümedeki harcama dağılımlarını gösterir.
+![Fresh Harcama - boxplot](https://github.com/user-attachments/assets/4e6d66cc-e69b-4ccd-b51f-65e0c4b592cf)
+![Milk Harcama boxplot](https://github.com/user-attachments/assets/40ee9a51-be52-4174-a9b4-a6d30716de84)
+
 
 # 5. Küme Sayısının Belirlenmesi (Optimal K)
 Elbow Yöntemi (WSS - Within-cluster Sum of Squares) ile doğru küme sayısının belirlenmesi sağlanır. WSS değeri, her bir küme için toplam varyansı ölçer ve bu değerin minimum olduğu nokta optimal küme sayısını verir.
-
-![elbow](https://github.com/user-attachments/assets/fdcaab99-2883-4e3c-a54d-9102e829ed72)
-
 Silhouette Yöntemi ile kümeleme sonuçlarının kalitesi değerlendirilir. Silhouette skoru, her bir verinin doğru küme içinde olup olmadığını gösterir.
+
 ![Elbow_wss](https://github.com/user-attachments/assets/4c2b8288-7aba-41db-bcc1-abc0df531048)
+![elbow](https://github.com/user-attachments/assets/fdcaab99-2883-4e3c-a54d-9102e829ed72)
+![silhouette](https://github.com/user-attachments/assets/f5e0fa79-bed3-4538-9e0c-23a0b588d1d1)
+![silScore](https://github.com/user-attachments/assets/e638f9e9-ecc7-433f-bc4b-4d65d10ca22e)
+
 
 # 6. Modelin Geliştirilmesi
+
 Elbow ve Silhouette yöntemleriyle belirlenen en uygun K değeri kullanılarak yeni kümeleme modelleri (2 küme ve 3 küme) oluşturulur.
 Bu yeni kümelerle birlikte verinin tekrar analiz edilmesi sağlanır ve her küme için ortalama harcama değerleri yeniden hesaplanır.
+![K2](https://github.com/user-attachments/assets/85873e32-4945-4bf0-9ed5-c0c7fe0c3c10)
+![K3](https://github.com/user-attachments/assets/5f534c6d-6401-415f-89ee-a8cdc3c9c315)
+
 
 # 7. Sonuçların Görselleştirilmesi
 Kümeleme sonuçları, fviz_cluster() fonksiyonu ile görselleştirilir. Bu fonksiyon, kümelerin görsel temsilini sağlar.
