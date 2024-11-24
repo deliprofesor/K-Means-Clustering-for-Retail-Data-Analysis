@@ -23,12 +23,14 @@ Aykırı değerler (outliers) tespit edilip temizlenebilir, ancak bu projede bu 
 K-Means Kümeleme Algoritması uygulanır. Bu algoritma, verileri belirli sayıda kümeye ayırır ve her küme, benzer özelliklere sahip verilerden oluşur. Kümeleme modeli oluşturulurken 4 küme sayısı belirlenir.
 Model oluşturulurken kullanılan parametreler: centers=4 (4 küme), iter.max=15 (maksimum 15 iterasyon), ve nstart=15 (15 farklı başlangıç noktası ile başlatma).
 Kümeleme sonuçları ve her bir verinin ait olduğu küme (clusterModel$cluster) elde edilir.
+
 ![k-means clustering](https://github.com/user-attachments/assets/35756eea-a92b-4c18-b839-948a0ffabd22)
 
 
 # 4. Kümeler Arası Analiz
 Kümeleme sonuçlarına göre her bir küme için ortalama harcama değerleri hesaplanır. Her küme için Fresh, Milk, Grocery, Frozen, Detergents_Paper, ve Delicatessen ürün kategorilerindeki harcamalar incelenir.
 Kümelemeyi görselleştirmek için boxplot grafikleri kullanılır. Bu grafikler, her kümedeki harcama dağılımlarını gösterir.
+
 ![Fresh Harcama - boxplot](https://github.com/user-attachments/assets/4e6d66cc-e69b-4ccd-b51f-65e0c4b592cf)
 ![Milk Harcama boxplot](https://github.com/user-attachments/assets/40ee9a51-be52-4174-a9b4-a6d30716de84)
 
